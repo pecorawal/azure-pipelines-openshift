@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: kevin-dotnet
-          image: https://quay-registry.apps.jsj26ubv.eastus.aroapp.io/coelsa/first-app/kevin-dotnet
+          image: quay-registry.apps.jsj26ubv.eastus.aroapp.io/coelsa/first-app/kevin-dotnet
           ports:
             - containerPort: 8080
 
