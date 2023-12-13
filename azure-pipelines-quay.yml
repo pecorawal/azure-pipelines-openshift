@@ -55,6 +55,7 @@ stages:
         kubernetesServiceConnection: 'aro-kubernetes'
         namespace: '$(project-name-dev)'
         manifests: |
-          $(Build.SourcesDirectory)/manifests/customer-dotnet-quay.deployment.yaml
-          $(Build.SourcesDirectory)/manifests/customer-dotnet.service.yaml
+          $(Build.SourcesDirectory)/manifests/customer-dotnet-quay*.yaml
         containers: 'quay-registry.apps.jsj26ubv.eastus.aroapp.io/coelsa/$(project-name-dev)/$(image-name):$(Build.BuildId)'
+
+
