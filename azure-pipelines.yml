@@ -2,7 +2,7 @@ trigger:
 - dev
 
 pool:
-  name: ocppool
+  name: coelsapool
 
 
 variables:
@@ -52,10 +52,10 @@ stages:
       displayName: Deploy to Openshift cluster
       inputs:
         action: deploy
-        kubernetesServiceConnection: 'aro-kubernetes'
+        kubernetesServiceConnection: 'ocp-kubernetes'
         namespace: '$(project-name-dev)'
         manifests: |
           $(Build.SourcesDirectory)/manifests/customer-dotnet-quay*.yaml
-        containers: 'quay-registry.apps.jsj26ubv.eastus.aroapp.io/coelsa/$(project-name-dev)/$(image-name):$(Build.BuildId)'
+        containers: 'quay-registry.apps.vgqa2hi9.eastus.aroapp.io/coelsa/$(project-name-dev)/$(image-name):$(Build.BuildId)'
 
 
